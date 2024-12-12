@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khanhs2Thuy</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+      }
+
+      .content {
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        background-color: rgb(42 41 41 / 50%);
+        padding: 20px 40px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-bottom: 10px;
+        border: none;
+      }
+
+      .content:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      /* Media Query cho PC */
+      @media (min-width: 1024px) {
+        .background {
+          background-image: url("images/WeddingImage/bannerpc.jpg");
+        }
+      }
+
+      /* Media Query cho Mobile */
+      @media (max-width: 1023px) {
+        .background {
+          background-image: url("images/WeddingImage/banner.jpg");
+        }
+      }
+
+      /* Tạo hiệu ứng rung bằng @keyframes */
+      @keyframes shake {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-10px);
+        }
+        50% {
+          transform: translateX(10px);
+        }
+        75% {
+          transform: translateX(-10px);
+        }
+        100% {
+          transform: translateX(10px);
+        }
+      }
+
+      /* Khi hover vào nút, áp dụng hiệu ứng rung */
+      .shake-button:hover {
+        animation: shake 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <button class="content shake-button" id="startButton">
+        Ấn Để Tiếp Tục
+      </button>
+    </div>
+  </body>
+
+  <script>
+    // document
+    //   .getElementById("startButton")
+    //   .addEventListener("click", function () {
+    //     var audio = new Audio(
+    //       "./music/NgayCuoi-KhacVietfeatCharmyPham_out.mp3"
+    //     );
+    //     audio
+    //       .play()
+    //       .then(() => {
+    //         console.log("Audio is playing.");
+    //         window.location.href = "index.html";
+    //       })
+    //       .catch((error) => {
+    //         console.error("Error playing audio:", error);
+    //         alert(
+    //           "Không thể phát nhạc. Kiểm tra đường dẫn file hoặc quyền của trình duyệt."
+    //         );
+    //       });
+    //   });
+    document
+      .getElementById("startButton")
+      .addEventListener("click", function () {
+        window.location.href = "main.html";
+      });
+  </script>
+</html>
