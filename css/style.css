@@ -56,11 +56,29 @@ body {
   margin-bottom: 10px;
 }
 
+.file-upload-container {
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
 .testimony-slide span {
   font-size: 18px;
   font-weight: bold;
   display: block;
   margin-bottom: 10px;
+}
+
+/* form#postForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.form-group {
+  background: #ffe1e1;
+  border-radius: 5px;
 }
 
 .testimony-slide blockquote {
@@ -1451,10 +1469,10 @@ form label {
   display: inline-block;
   overflow: hidden;
   cursor: pointer;
-  background-color: #4caf50;
+  background-color: #f14e95;
   color: white;
   padding: 10px 20px;
-  border: 2px solid #4caf50;
+  border: 2px solid #f14e95;
   border-radius: 5px;
   font-size: 16px;
   transition: background-color 0.3s, border-color 0.3s;
@@ -1551,7 +1569,7 @@ form label {
   background: rgba(255, 255, 255, 0.3);
 }
 #fh5co-started .btn {
-  height: 54px;
+  height: 39px;
   border: none !important;
   background: #f14e95;
   color: #fff;
@@ -1560,6 +1578,7 @@ form label {
   font-weight: 400;
   padding-left: 50px;
   padding-right: 50px;
+  border-radius: 5px;
 }
 #fh5co-started .form-inline .form-group {
   width: 100% !important;
