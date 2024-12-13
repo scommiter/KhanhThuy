@@ -705,17 +705,39 @@
     </script>
 
     <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        var audio = new Audio("./music/My_Love.mp3");
-        audio
-          .play()
-          .then(() => {
-            console.log("Audio resumed.");
-          })
-          .catch((error) => {
-            console.error("Error playing audio:", error);
-          });
-      });
+      // window.addEventListener("DOMContentLoaded", () => {
+      //   var audio = new Audio("./music/My_Love.mp3");
+      //   audio
+      //     .play()
+      //     .then(() => {
+      //       console.log("Audio resumed.");
+      //     })
+      //     .catch((error) => {
+      //       console.error("Error playing audio:", error);
+      //     });
+      // });
+
+      let isAudioPlayed = false;
+
+      function playAudio() {
+        if (!isAudioPlayed) {
+          const audio = new Audio("./music/My_Love.mp3");
+          audio
+            .play()
+            .then(() => {
+              console.log("Audio is playing.");
+              isAudioPlayed = true; // Đảm bảo audio chỉ phát một lần
+            })
+            .catch((error) => {
+              console.error("Error playing audio:", error);
+            });
+        }
+      }
+
+      // Bắt các sự kiện cần thiết
+      window.addEventListener("touchstart", playAudio, { once: true });
+      window.addEventListener("scroll", playAudio, { once: true });
+      window.addEventListener("mousedown", playAudio, { once: true });
     </script>
 
     <script>
